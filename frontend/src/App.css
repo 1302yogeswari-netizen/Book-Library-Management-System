@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f4ef;
+  color: #2f2a25;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 10%;
+  gap: 60px;
+}
+
+.landing-content {
+  max-width: 560px;
+}
+
+.tag {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #8b6f47;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 64px;
+  line-height: 1.05;
+  margin: 0 0 25px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #6f665e;
+  margin-bottom: 35px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 14px 28px;
+  background: #6f5135;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #573d27;
+}
+
+.book-image {
+  width: 360px;
+  height: 360px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book {
+  position: absolute;
+  width: 180px;
+  height: 240px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  font-weight: bold;
+  letter-spacing: 3px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.book-one {
+  background: #d9c2a6;
+  transform: rotate(-18deg) translateX(-55px);
+}
+
+.book-two {
+  background: #b7c7bd;
+  transform: rotate(5deg);
+}
+
+.book-three {
+  background: #d6a9a9;
+  transform: rotate(20deg) translateX(55px);
+}
+
+.library {
+  min-height: 100vh;
+  padding: 50px 8%;
+}
+
+.library header {
+  margin-bottom: 35px;
+}
+
+.library header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.library header p {
+  color: #766d65;
+}
+
+.library-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.library-actions input {
+  width: 280px;
+  padding: 13px 16px;
+  border: 1px solid #d8d0c8;
+  border-radius: 10px;
+  outline: none;
+}
+
+.empty-state {
+  background: white;
+  border-radius: 18px;
+  padding: 60px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.empty-state h2 {
+  font-size: 28px;
+}
+
+.empty-state p {
+  color: #766d65;
+}
+
+@media (max-width: 800px) {
+  .landing {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 25px;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+
+  .book-image {
+    transform: scale(0.8);
+  }
+
+  .library-actions {
+    flex-direction: column;
+  }
+
+  .library-actions input {
+    width: 100%;
+  }
+}
+
+
+.book-form {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.book-form h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.book-form input {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  margin-bottom: 15px;
+  border: 1px solid #d8d0c8;
+  border-radius: 10px;
+  outline: none;
+}
+
+.book-form div {
+  display: flex;
+  gap: 12px;
+}
+
+.book-form button[type="button"] {
+  background: #8c8177;
+}
+
+.book-form button[type="button"]:hover {
+  background: #6f665e;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.book-card h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 24px;
+}
+
+.book-card p {
+  color: #6f665e;
+  margin: 10px 0;
+}
+
+.book-card strong {
+  color: #2f2a25;
+}
+
+
+.book-card button {
+  margin-top: 12px;
+  margin-right: 8px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.book-card button:hover {
+  opacity: 0.85;
+}
+
+
+.book-card {
+  padding: 22px;
+  border-radius: 14px;
+  background: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-3px);
+}
+
+.book-card h2 {
+  margin-bottom: 12px;
+}
+
+.book-card p {
+  margin: 6px 0;
+}
+
+.library-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 25px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.stat-card p {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
