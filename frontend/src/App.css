@@ -152,29 +152,6 @@ button:hover {
   color: #766d65;
 }
 
-@media (max-width: 800px) {
-  .landing {
-    flex-direction: column;
-    text-align: center;
-    padding: 50px 25px;
-  }
-
-  h1 {
-    font-size: 46px;
-  }
-
-  .book-image {
-    transform: scale(0.8);
-  }
-
-  .library-actions {
-    flex-direction: column;
-  }
-
-  .library-actions input {
-    width: 100%;
-  }
-}
 
 
 .book-form {
