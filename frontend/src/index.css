@@ -34,7 +34,7 @@
   :root {
     --text: #9ca3af;
     --text-h: #f3f4f6;
-    --bg: #16171d;
+    --bg: #f7f4ef;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -52,8 +52,10 @@
 
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f4ef;
+  color: #2f2a25;
 }
-
 #root {
   width: 1126px;
   max-width: 100%;
