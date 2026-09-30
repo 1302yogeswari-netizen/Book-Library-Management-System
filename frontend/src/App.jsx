@@ -15,7 +15,7 @@ function App() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/books")
+    fetch("https://book-library-management-system-a4h9.onrender.com/api/books")
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((error) => console.error("Error:", error));
@@ -41,8 +41,8 @@ function App() {
     try {
       const response = await fetch(
         editingBook
-          ? `http://localhost:5000/api/books/${editingBook._id}`
-          : "http://localhost:5000/api/books",
+          ? `https://book-library-management-system-a4h9.onrender.com/api/books/${editingBook._id}`
+          : "https://book-library-management-system-a4h9.onrender.com/api/books",
         {
           method: editingBook ? "PUT" : "POST",
           headers: {
@@ -93,7 +93,7 @@ function App() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/books/${id}`,
+        `https://book-library-management-system-a4h9.onrender.com/api/books/${id}`,
         {
           method: "DELETE",
         }
@@ -131,7 +131,7 @@ function App() {
   const handleStatusChange = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/books/${id}/status`,
+        `https://book-library-management-system-a4h9.onrender.com/api/books/${id}/status`,
         {
           method: "PATCH",
         }
